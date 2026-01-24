@@ -1,11 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Merriweather, Open_Sans } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { generateOrganizationSchema } from '@/lib/schema'
 
-const inter = Inter({ subsets: ['latin'] })
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  weight: ['400', '700'],
+  display: 'swap',
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -67,7 +78,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${inter.className} overflow-x-hidden`}>
+      <body className={`${openSans.className} ${merriweather.variable} ${openSans.variable} overflow-x-hidden`}>
         <Header />
         <main className="min-h-screen">
           {children}
