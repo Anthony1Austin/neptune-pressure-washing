@@ -91,7 +91,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section - House Image Background */}
-      <section className="relative w-full text-white bg-neptune-dark-blue sm:bg-gradient-to-b sm:from-[#c8b3d6] sm:via-[#d8c6e0] sm:to-[#c8b3d6]">
+      <section className="relative w-full text-white bg-neptune-dark-blue pb-2 sm:pb-0 sm:bg-gradient-to-b sm:from-[#c8b3d6] sm:via-[#d8c6e0] sm:to-[#c8b3d6]">
         {/* Background house + bubbles */}
         <div className="w-full">
           <InteractiveHouse />
@@ -103,7 +103,7 @@ export default function HomePage() {
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 animate-fade-in drop-shadow-lg">
               Expert Power Cleaning
             </h1>
-            <p className="text-base sm:text-xl md:text-2xl mb-6 text-gray-200 max-w-3xl mx-auto drop-shadow">
+            <p className="text-base sm:text-xl md:text-2xl mb-0 sm:mb-6 text-gray-200 max-w-3xl mx-auto drop-shadow">
               Revitalize Your Property with Our Professional and Eco-Friendly Pressure Washing Services
             </p>
           
