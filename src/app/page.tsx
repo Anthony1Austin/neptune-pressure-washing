@@ -91,7 +91,7 @@ export default function HomePage() {
       />
 
       {/* Hero Section - House Image Background */}
-      <section className="relative w-full text-white bg-neptune-dark-blue bg-gradient-to-b from-[#c8b3d6] via-[#d8c6e0] to-[#c8b3d6]">
+      <section className="relative w-full text-white bg-neptune-dark-blue sm:bg-gradient-to-b sm:from-[#c8b3d6] sm:via-[#d8c6e0] sm:to-[#c8b3d6]">
         {/* Background house + bubbles */}
         <div className="w-full">
           <InteractiveHouse />

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -10,6 +10,7 @@ interface ServiceBubble {
   label: string
   href: string
   position: { x: number; y: number }
+  mobilePosition?: { x: number; y: number }
   target: { x: number; y: number } // Where the line should point on the house
   description: string
   icon?: string
@@ -21,6 +22,7 @@ const services: ServiceBubble[] = [
     label: 'Gutter Cleaning',
     href: '/services/gutter-cleaning',
     position: { x: 22, y: 30 },
+    mobilePosition: { x: 18, y: 24 },
     target: { x: 32, y: 28 },
     description: 'Keep your gutters clean and functional year-round',
   },
@@ -29,6 +31,7 @@ const services: ServiceBubble[] = [
     label: 'Roof Washing',
     href: '/services/roof-washing',
     position: { x: 50, y: 32 },
+    mobilePosition: { x: 50, y: 26 },
     target: { x: 50, y: 38 },
     description: 'Professional roof cleaning to extend roof life',
   },
@@ -37,6 +40,7 @@ const services: ServiceBubble[] = [
     label: 'Concrete Cleaning',
     href: '/services/concrete-cleaning',
     position: { x: 78, y: 80 },
+    mobilePosition: { x: 78, y: 72 },
     target: { x: 72, y: 74 },
     description: 'Driveway and concrete surface restoration',
   },
@@ -45,6 +49,7 @@ const services: ServiceBubble[] = [
     label: 'House Wash',
     href: '/services/house-wash',
     position: { x: 76, y: 42 },
+    mobilePosition: { x: 78, y: 40 },
     target: { x: 58, y: 45 },
     description: 'Complete exterior house cleaning service',
   },
@@ -53,6 +58,7 @@ const services: ServiceBubble[] = [
     label: 'Fences & Decks',
     href: '/services/fences-decks',
     position: { x: 50, y: 84 },
+    mobilePosition: { x: 50, y: 86 },
     target: { x: 50, y: 76 },
     description: 'Restore and protect your fences and decks',
   },
@@ -61,6 +67,7 @@ const services: ServiceBubble[] = [
     label: 'Brick Cleaning',
     href: '/services/brick-cleaning',
     position: { x: 10, y: 60 },
+    mobilePosition: { x: 16, y: 60 },
     target: { x: 28, y: 58 },
     description: 'Expert brick and stone surface cleaning',
   },
@@ -69,6 +76,7 @@ const services: ServiceBubble[] = [
     label: 'Patio & Deck Cleaning',
     href: '/services/patio-deck-cleaning',
     position: { x: 14, y: 76 },
+    mobilePosition: { x: 22, y: 76 },
     target: { x: 24, y: 72 },
     description: 'Transform your outdoor living spaces',
   },
@@ -77,6 +85,27 @@ const services: ServiceBubble[] = [
 export default function InteractiveHouse() {
   const [hoveredBubble, setHoveredBubble] = useState<string | null>(null)
   const [activeBubble, setActiveBubble] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 639px)')
+    const handleChange = () => setIsMobile(media.matches)
+
+    handleChange()
+    if (media.addEventListener) {
+      media.addEventListener('change', handleChange)
+    } else {
+      media.addListener(handleChange)
+    }
+
+    return () => {
+      if (media.removeEventListener) {
+        media.removeEventListener('change', handleChange)
+      } else {
+        media.removeListener(handleChange)
+      }
+    }
+  }, [])
 
   return (
     <div className="relative w-full my-0">
@@ -95,9 +124,11 @@ export default function InteractiveHouse() {
         />
         
         {/* Service Bubbles */}
-        {services.map((service, index) => {
+        <div className="hidden sm:block">
+          {services.map((service, index) => {
           // Determine tooltip position - directly above or below based on bubble location
-          const isTop = service.position.y < 50 // If bubble is in upper half, show tooltip below
+          const currentPosition = isMobile && service.mobilePosition ? service.mobilePosition : service.position
+          const isTop = currentPosition.y < 50 // If bubble is in upper half, show tooltip below
           
           // Tooltip always centered horizontally above or below bubble
           const tooltipVerticalClass = isTop 
@@ -123,8 +154,8 @@ export default function InteractiveHouse() {
               }}
               className="absolute z-20 pointer-events-auto"
               style={{
-                left: `${service.position.x}%`,
-                top: `${service.position.y}%`,
+                left: `${currentPosition.x}%`,
+                top: `${currentPosition.y}%`,
                 transform: 'translate(-50%, -50%)',
               }}
               onMouseEnter={() => setHoveredBubble(service.id)}
@@ -203,7 +234,8 @@ export default function InteractiveHouse() {
             </Link>
           </motion.div>
           )
-        })}
+          })}
+        </div>
 
         {/* Satisfaction Badge - Smooth Circular Design */}
         <motion.div
