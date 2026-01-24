@@ -98,12 +98,12 @@ export default function HomePage() {
         </div>
 
         {/* Hero Text Overlay */}
-        <div className="absolute top-0 left-0 right-0 z-30">
-          <div className="container mx-auto px-4 pt-12 md:pt-16 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in drop-shadow-lg">
+        <div className="relative z-10 mt-6 md:mt-0 md:absolute md:top-0 md:left-0 md:right-0 md:z-30 pointer-events-none">
+          <div className="container mx-auto px-4 pt-6 sm:pt-10 md:pt-16 text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 animate-fade-in drop-shadow-lg">
               Expert Power Cleaning
             </h1>
-            <p className="text-xl md:text-2xl mb-6 text-gray-200 max-w-3xl mx-auto drop-shadow">
+            <p className="text-base sm:text-xl md:text-2xl mb-6 text-gray-200 max-w-3xl mx-auto drop-shadow">
               Revitalize Your Property with Our Professional and Eco-Friendly Pressure Washing Services
             </p>
           

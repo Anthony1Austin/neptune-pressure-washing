@@ -121,7 +121,7 @@ export default function InteractiveHouse() {
                 type: "spring",
                 stiffness: 200
               }}
-              className="absolute z-10"
+              className="absolute z-20 pointer-events-auto"
               style={{
                 left: `${service.position.x}%`,
                 top: `${service.position.y}%`,
@@ -135,7 +135,7 @@ export default function InteractiveHouse() {
                 <motion.div
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="relative group cursor-pointer"
+                  className="relative group cursor-pointer touch-manipulation"
                   style={{
                     position: 'relative',
                   }}
@@ -149,7 +149,7 @@ export default function InteractiveHouse() {
                         : '0 4px 15px rgba(0, 0, 0, 0.3)',
                     }}
                     transition={{ duration: 0.3 }}
-                    className="bg-neptune-blue/95 backdrop-blur-sm text-white px-5 py-3 rounded-full shadow-xl border-2 border-neptune-gold/50 hover:border-neptune-gold transition-all duration-300 relative overflow-hidden"
+                    className="bg-neptune-blue/95 backdrop-blur-sm text-white px-3 py-2 sm:px-5 sm:py-3 rounded-full shadow-xl border-2 border-neptune-gold/50 hover:border-neptune-gold transition-all duration-300 relative overflow-hidden"
                   >
                     {/* Shine effect */}
                     <motion.div
@@ -163,7 +163,7 @@ export default function InteractiveHouse() {
                         repeatDelay: 0.5,
                       }}
                     />
-                    <span className="font-bold text-sm md:text-base whitespace-nowrap relative z-10">
+                    <span className="font-bold text-[11px] sm:text-sm md:text-base whitespace-nowrap relative z-10">
                       {service.label}
                     </span>
                   </motion.div>
