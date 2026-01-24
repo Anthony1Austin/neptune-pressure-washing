@@ -16,4 +16,28 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-item {
+    white-space: nowrap;
+    padding-right: 2.5rem;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

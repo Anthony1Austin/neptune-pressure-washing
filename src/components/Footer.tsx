@@ -44,7 +44,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=100063620580327"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"
@@ -53,7 +53,7 @@ export default function Footer() {
                 <span className="text-white font-bold">f</span>
               </a>
               <a
-                href="https://www.yelp.com"
+                href="https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"

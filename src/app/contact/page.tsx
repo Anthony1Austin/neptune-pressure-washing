@@ -75,7 +75,7 @@ export default function ContactPage() {
                   <h3 className="font-bold text-lg text-neptune-blue mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
                     <a
-                      href="https://www.facebook.com"
+                      href="https://www.facebook.com/profile.php?id=100063620580327"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"
@@ -84,7 +84,7 @@ export default function ContactPage() {
                       <span className="text-white font-bold">f</span>
                     </a>
                     <a
-                      href="https://www.yelp.com"
+                      href="https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"

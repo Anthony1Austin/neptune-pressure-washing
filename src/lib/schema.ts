@@ -119,8 +119,8 @@ export function generateOrganizationSchema() {
       availableLanguage: 'English',
     },
     sameAs: [
-      'https://www.facebook.com/neptunepressurewashing',
-      'https://www.yelp.com/biz/neptune-pressure-washing-massillon',
+      'https://www.facebook.com/profile.php?id=100063620580327',
+      'https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing',
     ],
   }
 }

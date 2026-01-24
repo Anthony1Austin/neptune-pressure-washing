@@ -1,26 +1,12 @@
 import { Metadata } from 'next'
-import TestimonialCard from '@/components/TestimonialCard'
 import CTASection from '@/components/CTASection'
-import type { Testimonial } from '@/types'
+import { sortedManualReviews, renderStars } from '@/lib/reviews'
 
 export const metadata: Metadata = {
   title: 'Customer Reviews & Testimonials | Neptune Pressure Washing',
   description: 'Read what our satisfied customers have to say about Neptune Pressure Washing services in Massillon, Ohio. Real reviews from real customers.',
   keywords: 'neptune pressure washing reviews, pressure washing testimonials massillon ohio, customer reviews',
 }
-
-// Placeholder testimonials - will be replaced with CMS content
-const testimonials: Testimonial[] = [
-  {
-    id: '1',
-    name: 'Mary F.',
-    service: 'House Wash, Deck Cleaning, Fence Cleaning',
-    rating: 5,
-    text: 'Thomas is very professional & meticulous. My house looks like I had it painted. The gutters had that black stuff & now that are the original color. He went above & beyond in pressure cleaning my house, wood deck, white composite fence & other small things that were not even in the quote. Would give him a 10 star review if I could. I\'m very happy & very satisfied.',
-    date: '2024',
-  },
-  // Add more testimonials here as they become available
-]
 
 export default function ReviewsPage() {
   return (
@@ -38,34 +24,33 @@ export default function ReviewsPage() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          {testimonials.length > 0 ? (
-            <>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-neptune-dark-blue mb-4">
-                  Don't Just Take Our Word For It
-                </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Read real reviews from our satisfied customers
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {testimonials.map((testimonial, index) => (
-                  <TestimonialCard
-                    key={testimonial.id}
-                    testimonial={testimonial}
-                    delay={index * 0.1}
-                  />
-                ))}
-              </div>
-            </>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-500 mb-4 text-lg">Customer reviews coming soon!</p>
-              <p className="text-gray-400">
-                Check back soon to see what our customers have to say about our services.
-              </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neptune-dark-blue mb-4">
+              Don't Just Take Our Word For It
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              See what our satisfied customers have to say about our services
+            </p>
+          </div>
+
+          <div className="bg-gray-50 p-6 rounded-xl shadow-md max-w-4xl mx-auto mb-10">
+            <div className="space-y-6">
+              {sortedManualReviews.map((review) => (
+                <div
+                  key={`${review.name}-${review.date}`}
+                  className="border-b border-gray-200 last:border-0 pb-6 last:pb-0"
+                >
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <p className="font-bold text-neptune-dark-blue">{review.name}</p>
+                  </div>
+                  <div className="text-neptune-gold font-semibold mb-2">
+                    {renderStars(review.rating)}
+                  </div>
+                  <p className="text-gray-700">{review.text}</p>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
 
           <div className="mt-12 bg-gray-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-neptune-dark-blue mb-4">
@@ -84,7 +69,7 @@ export default function ReviewsPage() {
                 Leave a Google Review
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=100063620580327"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-neptune-gold hover:bg-neptune-gold/90 text-neptune-dark-blue font-bold py-3 px-6 rounded-full transition-all"

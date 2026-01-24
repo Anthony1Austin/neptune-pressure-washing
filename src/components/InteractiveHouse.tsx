@@ -28,8 +28,8 @@ const services: ServiceBubble[] = [
     id: 'roof-washing',
     label: 'Roof Washing',
     href: '/services/roof-washing',
-    position: { x: 50, y: 28 },
-    target: { x: 50, y: 34 },
+    position: { x: 50, y: 32 },
+    target: { x: 50, y: 38 },
     description: 'Professional roof cleaning to extend roof life',
   },
   {
@@ -52,8 +52,8 @@ const services: ServiceBubble[] = [
     id: 'fences-decks',
     label: 'Fences & Decks',
     href: '/services/fences-decks',
-    position: { x: 50, y: 88 },
-    target: { x: 50, y: 80 },
+    position: { x: 50, y: 84 },
+    target: { x: 50, y: 76 },
     description: 'Restore and protect your fences and decks',
   },
   {
@@ -108,6 +108,8 @@ export default function InteractiveHouse() {
             ? 'border-l-8 border-r-8 border-b-8 border-transparent border-b-white'
             : 'border-l-8 border-r-8 border-t-8 border-transparent border-t-white'
           
+          const roofOffsetLeft = service.id === 'roof-washing' ? 'calc(50% - 3.5rem)' : undefined
+
           return (
             <motion.div
               key={service.id}
@@ -178,15 +180,19 @@ export default function InteractiveHouse() {
                           ? 'right-0'
                           : 'left-1/2 -translate-x-1/2'
                       } w-56 z-20`}
+                      style={roofOffsetLeft ? { left: roofOffsetLeft } : undefined}
                     >
                       <div className="bg-white text-neptune-dark-blue p-4 rounded-xl shadow-2xl border-2 border-neptune-gold/30 relative">
                         <p className="text-sm font-medium text-center">{service.description}</p>
                         {/* Arrow pointing to bubble - centered, or adjusted for Fences & Decks */}
-                        <div className={`absolute ${isTop ? 'top-0' : 'bottom-0'} ${
-                          service.id === 'house-wash' || service.id === 'fences-decks' || service.id === 'concrete-cleaning'
-                            ? 'right-8'
-                            : 'left-1/2 -translate-x-1/2'
-                        } ${isTop ? '-translate-y-full' : 'translate-y-full'}`}>
+                        <div
+                          className={`absolute ${isTop ? 'top-0' : 'bottom-0'} ${
+                            service.id === 'house-wash' || service.id === 'fences-decks' || service.id === 'concrete-cleaning'
+                              ? 'right-8'
+                              : 'left-1/2 -translate-x-1/2'
+                          } ${isTop ? '-translate-y-full' : 'translate-y-full'}`}
+                          style={roofOffsetLeft ? { left: roofOffsetLeft } : undefined}
+                        >
                           <div className={`w-0 h-0 ${arrowDirection}`}></div>
                         </div>
                       </div>

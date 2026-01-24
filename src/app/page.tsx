@@ -5,9 +5,8 @@ import TrustBadges from '@/components/TrustBadges'
 import ProminentTrustBadges from '@/components/ProminentTrustBadges'
 import BeforeAfterGallery from '@/components/BeforeAfterGallery'
 import ServiceCard from '@/components/ServiceCard'
-import TestimonialCard from '@/components/TestimonialCard'
 import { generateLocalBusinessSchema } from '@/lib/schema'
-import type { Testimonial, BeforeAfter } from '@/types'
+import type { BeforeAfter } from '@/types'
 
 export const metadata: Metadata = {
   title: 'Professional Pressure Washing Services in Massillon, OH',
@@ -38,8 +37,8 @@ const localBusinessSchema = generateLocalBusinessSchema({
   ],
   priceRange: '$$',
   sameAs: [
-    'https://www.facebook.com/neptunepressurewashing',
-    'https://www.yelp.com/biz/neptune-pressure-washing-massillon',
+    'https://www.facebook.com/profile.php?id=100063620580327',
+    'https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing',
   ],
 })
 
@@ -82,17 +81,6 @@ const services = [
   },
 ]
 
-// Placeholder testimonials - will be replaced with CMS content
-const testimonials: Testimonial[] = [
-  {
-    id: '1',
-    name: 'Mary F.',
-    service: 'House Wash, Deck Cleaning, Fence Cleaning',
-    rating: 5,
-    text: 'Thomas is very professional & meticulous. My house looks like I had it painted. The gutters had that black stuff & now that are the original color. He went above & beyond in pressure cleaning my house, wood deck, white composite fence & other small things that were not even in the quote. Would give him a 10 star review if I could. I\'m very happy & very satisfied.',
-    date: '2024',
-  },
-]
 
 export default function HomePage() {
   return (
@@ -181,34 +169,6 @@ export default function HomePage() {
               />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-neptune-dark-blue mb-4">
-              Don't Just Take Our Word For It
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              See what our satisfied customers have to say about our services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.id}
-                testimonial={testimonial}
-                delay={index * 0.1}
-              />
-            ))}
-          </div>
-          {testimonials.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-500 mb-4">Customer testimonials coming soon!</p>
-            </div>
-          )}
         </div>
       </section>
 
