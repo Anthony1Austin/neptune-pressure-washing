@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import type { BookingFormData } from '@/types'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: NextRequest) {
   try {
     const data: BookingFormData = await request.json()
@@ -16,6 +14,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'RESEND_API_KEY is not configured' },
+        { status: 500 }
+      )
+    }
+
+    const resend = new Resend(apiKey)
     const from = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
     const to = process.env.RESEND_TO_EMAIL || 'neptunepwcllc@gmail.com'
 
