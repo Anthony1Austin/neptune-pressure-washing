@@ -6,11 +6,11 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Professional Roof Washing Services in Massillon, OH | Soft Wash Roof Cleaning',
+  title: 'Professional Roof Washing Services | Soft Wash Roof Cleaning',
   description: 'Expert roof washing and cleaning services in Massillon, Ohio. Remove algae, moss, and debris to extend your roof\'s lifespan. Soft wash technology. Licensed & insured.',
   keywords: getKeywordsForService('roof-washing').join(', ') + ', ' + primaryKeywords.roof,
   openGraph: {
-    title: 'Professional Roof Washing Services in Massillon, OH',
+    title: 'Professional Roof Washing Services',
     description: 'Expert roof cleaning to protect and extend your roof\'s life. Free estimates!',
   },
 }
@@ -38,7 +38,7 @@ export default function RoofWashingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Professional Roof Washing Services in Massillon, OH
+              Professional Roof Washing Services
             </h1>
             <p className="text-xl mb-8 text-gray-200">
               Extend your roof's lifespan and restore its appearance with our professional roof washing services. We use safe soft wash technology to remove algae, moss, and debris without damaging your shingles.

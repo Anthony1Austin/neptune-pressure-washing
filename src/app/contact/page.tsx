@@ -51,14 +51,6 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg text-neptune-blue mb-2">Location</h3>
-                  <p className="text-neptune-dark-blue">Massillon, OH</p>
-                  <p className="text-gray-600 text-sm mt-1">
-                    Serving Massillon and surrounding areas
-                  </p>
-                </div>
-
-                <div>
                   <h3 className="font-bold text-lg text-neptune-blue mb-2">Operating Hours</h3>
                   <p className="text-neptune-dark-blue">Monday - Sunday: 9am - 9pm</p>
                   <p className="text-gray-600 text-sm mt-1">Available 7 days a week</p>
@@ -67,7 +59,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-lg text-neptune-blue mb-2">Service Areas</h3>
                   <p className="text-neptune-dark-blue mb-2">
-                    We serve Massillon, Canton, North Canton, Barberton, Green, Jackson, Hartville, Uniontown, and throughout Stark and Summit Counties.
+                    We serve Barberton, Belden Village, Canton, Clinton, Green, Hartville, Jackson Township, Jackson, Massillon, New Franklin, North Canton, Norton, Plain Township, Portage Lakes, Uniontown, and throughout Stark and Summit Counties.
                   </p>
                 </div>
 

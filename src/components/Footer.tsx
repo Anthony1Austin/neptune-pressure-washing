@@ -13,13 +13,22 @@ export default function Footer() {
   ]
 
   const areas = [
-    'Massillon, OH',
-    'Canton, OH',
-    'North Canton, OH',
     'Barberton, OH',
+    'Belden Village, OH',
+    'Canton, OH',
+    'Clinton, OH',
     'Green, OH',
-    'Jackson, OH',
     'Hartville, OH',
+    'Jackson Township, OH',
+    'Jackson, OH',
+    'Massillon, OH',
+    'New Franklin, OH',
+    'North Canton, OH',
+    'Norton, OH',
+    'Plain Township, OH',
+    'Portage Lakes, OH',
+    'Stark County, OH',
+    'Summit County, OH',
     'Uniontown, OH',
   ]
 
@@ -39,7 +48,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              Professional pressure washing services in Massillon, Ohio and surrounding areas.
+              Professional pressure washing services in Stark and Summit Counties.
               Licensed, insured, and committed to 100% customer satisfaction.
             </p>
             <div className="flex space-x-4">
@@ -146,10 +155,6 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <p className="text-gray-300">Location:</p>
-                <p className="text-white">Massillon, OH</p>
-              </div>
-              <div>
                 <p className="text-gray-300 mb-2">Hours:</p>
                 <p className="text-white text-sm">Mon - Sun: 9am - 9pm</p>
               </div>
@@ -169,12 +174,6 @@ export default function Footer() {
                 {area}
               </span>
             ))}
-            <span className="bg-neptune-blue px-3 py-1 rounded-full text-sm text-gray-300">
-              Stark County, OH
-            </span>
-            <span className="bg-neptune-blue px-3 py-1 rounded-full text-sm text-gray-300">
-              Summit County, OH
-            </span>
           </div>
         </div>
 

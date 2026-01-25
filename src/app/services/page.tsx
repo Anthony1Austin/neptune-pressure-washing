@@ -4,7 +4,7 @@ import ServiceCard from '@/components/ServiceCard'
 import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
-  title: 'All Pressure Washing Services in Massillon, OH',
+  title: 'All Pressure Washing Services',
   description: 'Complete list of professional pressure washing services offered by Neptune Pressure Washing in Massillon, Ohio. House washing, roof cleaning, deck restoration, and more.',
   keywords: 'pressure washing services massillon ohio, house washing, roof cleaning, deck cleaning, gutter cleaning, concrete cleaning, patio cleaning',
 }

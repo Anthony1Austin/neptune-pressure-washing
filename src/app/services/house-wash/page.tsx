@@ -8,11 +8,11 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Professional House Washing Services in Massillon, OH | Free Estimates',
+  title: 'Professional House Washing Services | Free Estimates',
   description: 'Expert house washing services in Massillon, Ohio. Remove dirt, grime, mold, and mildew from your home\'s exterior. Eco-friendly cleaning solutions. Licensed & insured. 100% satisfaction guaranteed.',
   keywords: getKeywordsForService('house-wash').join(', ') + ', ' + primaryKeywords.house,
   openGraph: {
-    title: 'Professional House Washing Services in Massillon, OH',
+    title: 'Professional House Washing Services',
     description: 'Expert house washing services to restore your home\'s curb appeal. Free estimates!',
   },
 }
@@ -41,7 +41,7 @@ export default function HouseWashPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Professional House Washing Services in Massillon, OH
+              Professional House Washing Services
             </h1>
             <p className="text-xl mb-8 text-gray-200">
               Restore your home's curb appeal with our expert house washing services. We remove dirt, grime, mold, and mildew to make your home look like new.
@@ -203,7 +203,7 @@ export default function HouseWashPage() {
       {/* CTA Section */}
       <CTASection
         title="Ready to Transform Your Home's Exterior?"
-        description="Get a free quote today and see why Neptune Pressure Washing is the trusted choice for house washing in Massillon, Ohio."
+        description="Get your free quote today and discover why Neptune Pressure Washing is the trusted choice."
       />
     </>
   )

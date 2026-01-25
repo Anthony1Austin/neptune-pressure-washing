@@ -6,7 +6,7 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Patio & Deck Cleaning Services in Massillon, OH',
+  title: 'Patio & Deck Cleaning Services',
   description: 'Professional patio and deck cleaning services in Massillon, Ohio. Transform your outdoor living spaces. Free estimates!',
   keywords: getKeywordsForService('patio-deck-cleaning').join(', '),
 }
@@ -26,7 +26,7 @@ export default function PatioDeckCleaningPage() {
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Patio & Deck Cleaning Services in Massillon, OH</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Patio & Deck Cleaning Services</h1>
             <p className="text-xl mb-8 text-gray-200">Transform your outdoor living spaces with expert patio and deck cleaning.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="bg-neptune-gold hover:bg-neptune-gold/90 text-neptune-dark-blue font-bold py-4 px-8 rounded-full">Get Free Quote</a>

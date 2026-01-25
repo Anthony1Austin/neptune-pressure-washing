@@ -63,13 +63,13 @@ export default function Header() {
         <nav className="container mx-auto px-4 py-6 relative z-10">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-16 h-16 bg-neptune-gold rounded-full flex items-center justify-center">
-                <span className="text-neptune-dark-blue font-bold text-2xl">N</span>
-              </div>
-              <div className="text-white">
-                <div className="font-bold text-2xl">NEPTUNE</div>
-                <div className="text-sm text-neptune-gold">PRESSURE WASHING</div>
+            <Link href="/" className="flex items-center space-x-3 ml-4">
+              <div className="w-44 h-44 sm:w-48 sm:h-48 -my-8 sm:-my-10 flex items-center justify-center">
+                <img
+                  src="/images/image1.png"
+                  alt="Neptune Pressure Washing logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </Link>
 

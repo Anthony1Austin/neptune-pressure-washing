@@ -15,7 +15,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = "Ready to Transform Your Property?",
-  description = "Get a free quote today and see why Neptune Pressure Washing is the trusted choice in Massillon, Ohio.",
+  description = "Get your free quote today and discover why Neptune Pressure Washing is the trusted choice.",
   primaryButtonText = "Get Free Quote",
   primaryButtonLink = "/contact",
   secondaryButtonText = "Call 330-412-9330",

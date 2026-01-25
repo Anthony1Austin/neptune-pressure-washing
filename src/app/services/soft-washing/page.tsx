@@ -6,7 +6,7 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Soft Washing Services in Massillon, OH | Gentle Pressure Washing',
+  title: 'Soft Washing Services | Gentle Pressure Washing',
   description: 'Professional soft washing services in Massillon, Ohio. Gentle, effective cleaning for delicate surfaces. Free estimates!',
   keywords: getKeywordsForService('soft-washing').join(', '),
 }
@@ -26,7 +26,7 @@ export default function SoftWashingPage() {
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Soft Washing Services in Massillon, OH</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Soft Washing Services</h1>
             <p className="text-xl mb-8 text-gray-200">Gentle, effective cleaning for delicate surfaces using low-pressure soft wash technology.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="bg-neptune-gold hover:bg-neptune-gold/90 text-neptune-dark-blue font-bold py-4 px-8 rounded-full">Get Free Quote</a>

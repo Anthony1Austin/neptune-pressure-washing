@@ -6,11 +6,11 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Professional Concrete Cleaning Services in Massillon, OH | Driveway Pressure Washing',
+  title: 'Professional Concrete Cleaning Services | Driveway Pressure Washing',
   description: 'Expert concrete and driveway cleaning services in Massillon, Ohio. Remove oil stains, dirt, and grime. Restore your concrete surfaces. Free estimates!',
   keywords: getKeywordsForService('concrete-cleaning').join(', ') + ', ' + primaryKeywords.concrete + ', ' + primaryKeywords.driveway,
   openGraph: {
-    title: 'Professional Concrete Cleaning Services in Massillon, OH',
+    title: 'Professional Concrete Cleaning Services',
     description: 'Expert driveway and concrete cleaning to restore your surfaces. Free estimates!',
   },
 }
@@ -38,7 +38,7 @@ export default function ConcreteCleaningPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Professional Concrete Cleaning Services in Massillon, OH
+              Professional Concrete Cleaning Services
             </h1>
             <p className="text-xl mb-8 text-gray-200">
               Transform your driveway, sidewalks, and concrete surfaces with our professional cleaning services. Remove oil stains, dirt, grime, and restore your concrete to like-new condition.

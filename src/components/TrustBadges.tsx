@@ -3,22 +3,10 @@
 import { motion } from 'framer-motion'
 
 export default function TrustBadges() {
+  const startYear = 2018
+  const yearsInBusiness = Math.max(new Date().getFullYear() - startYear, 1)
+
   const badges = [
-    {
-      icon: '✓',
-      text: 'Licensed & Insured',
-      description: 'Fully licensed and insured for your protection',
-    },
-    {
-      icon: '✓',
-      text: 'Years in Business',
-      description: 'X+ years of experience serving Massillon', // Update X with actual years
-    },
-    {
-      icon: '✓',
-      text: 'Locally Owned & Operated',
-      description: 'Proudly serving Massillon and surrounding areas',
-    },
     {
       icon: '✓',
       text: '100% Satisfaction',
@@ -60,7 +48,7 @@ export default function TrustBadges() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {badges.map((badge, index) => (
             <motion.div
               key={badge.text}

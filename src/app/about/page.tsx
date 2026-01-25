@@ -16,7 +16,7 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Neptune Pressure Washing</h1>
             <p className="text-xl mb-8 text-gray-200">
-              Locally owned and operated, serving Massillon, Ohio and surrounding areas with excellence
+              Locally owned and operated, serving Stark and Summit Counties with excellence.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-bold text-xl text-neptune-blue mb-2">Locally Owned</h3>
-                  <p className="text-gray-700">Proudly serving Massillon and surrounding communities.</p>
+                  <p className="text-gray-700">Proudly serving Stark and Summit Counties.</p>
                 </div>
               </div>
 
@@ -73,18 +73,25 @@ export default function AboutPage() {
               </p>
               <div className="grid md:grid-cols-2 gap-4 mb-8">
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                  <li>Massillon, OH</li>
-                  <li>Canton, OH</li>
-                  <li>North Canton, OH</li>
                   <li>Barberton, OH</li>
+                  <li>Belden Village, OH</li>
+                  <li>Canton, OH</li>
+                  <li>Clinton, OH</li>
                   <li>Green, OH</li>
+                  <li>Hartville, OH</li>
+                  <li>Jackson Township, OH</li>
+                  <li>Jackson, OH</li>
+                  <li>Massillon, OH</li>
                 </ul>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                  <li>Jackson, OH</li>
-                  <li>Hartville, OH</li>
-                  <li>Uniontown, OH</li>
+                  <li>New Franklin, OH</li>
+                  <li>North Canton, OH</li>
+                  <li>Norton, OH</li>
+                  <li>Plain Township, OH</li>
+                  <li>Portage Lakes, OH</li>
                   <li>Stark County, OH</li>
                   <li>Summit County, OH</li>
+                  <li>Uniontown, OH</li>
                 </ul>
               </div>
 
@@ -102,7 +109,7 @@ export default function AboutPage() {
 
       <CTASection
         title="Ready to Work With Us?"
-        description="Get a free estimate today and see why Neptune Pressure Washing is the trusted choice in Massillon, Ohio."
+        description="Get your free quote today and discover why Neptune Pressure Washing is the trusted choice."
       />
     </>
   )

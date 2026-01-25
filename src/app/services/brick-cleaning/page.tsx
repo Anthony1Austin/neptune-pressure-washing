@@ -6,7 +6,7 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Brick Cleaning Services in Massillon, OH | Stone Cleaning',
+  title: 'Brick Cleaning Services | Stone Cleaning',
   description: 'Professional brick and stone cleaning services in Massillon, Ohio. Restore your brick surfaces. Free estimates!',
   keywords: getKeywordsForService('brick-cleaning').join(', '),
 }
@@ -26,7 +26,7 @@ export default function BrickCleaningPage() {
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Brick Cleaning Services in Massillon, OH</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Brick Cleaning Services</h1>
             <p className="text-xl mb-8 text-gray-200">Expert brick and stone surface cleaning to restore your home's beautiful brickwork.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="bg-neptune-gold hover:bg-neptune-gold/90 text-neptune-dark-blue font-bold py-4 px-8 rounded-full">Get Free Quote</a>

@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion'
 
 export default function ProminentTrustBadges() {
+  const startYear = 2018
+  const yearsInBusiness = Math.max(new Date().getFullYear() - startYear, 1)
+
   const badges = [
     {
       icon: '🛡️',
@@ -12,12 +15,12 @@ export default function ProminentTrustBadges() {
     {
       icon: '🏆',
       text: 'Years in Business',
-      description: 'X+ years of experience serving Massillon', // Update X with actual years
+      description: `${yearsInBusiness} years of trusted services.`,
     },
     {
       icon: '🏠',
       text: 'Locally Owned & Operated',
-      description: 'Proudly serving Massillon and surrounding areas',
+      description: 'Proudly serving Stark and Summit Counties.',
     },
   ]
 
@@ -38,7 +41,7 @@ export default function ProminentTrustBadges() {
                 stiffness: 200,
                 damping: 15
               }}
-              className="flex items-center space-x-3 bg-neptune-blue/5 px-6 py-4 rounded-full border-2 border-neptune-gold/30 hover:border-neptune-gold transition-all duration-300"
+              className="flex items-center space-x-3 bg-neptune-blue/95 px-6 py-4 rounded-full border-2 border-neptune-gold/30 hover:border-neptune-gold transition-all duration-300"
             >
               <motion.div 
                 className="text-2xl"
@@ -55,10 +58,10 @@ export default function ProminentTrustBadges() {
                 {badge.icon}
               </motion.div>
               <div>
-                <div className="font-bold text-neptune-dark-blue text-sm md:text-base">
+                <div className="font-bold text-white text-sm md:text-base">
                   {badge.text}
                 </div>
-                <div className="text-xs text-gray-600 hidden md:block">
+                <div className="text-xs text-white/80 hidden md:block">
                   {badge.description}
                 </div>
               </div>

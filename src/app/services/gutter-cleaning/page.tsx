@@ -6,11 +6,11 @@ import { generateServiceSchema } from '@/lib/schema'
 import { serviceAreas } from '@/lib/keywords'
 
 export const metadata: Metadata = {
-  title: 'Professional Gutter Cleaning Services in Massillon, OH | Free Estimates',
+  title: 'Professional Gutter Cleaning Services | Free Estimates',
   description: 'Expert gutter cleaning services in Massillon, Ohio. Keep your gutters clean and functional year-round. Prevent water damage and maintain your home. Licensed & insured.',
   keywords: getKeywordsForService('gutter-cleaning').join(', ') + ', ' + primaryKeywords.gutter,
   openGraph: {
-    title: 'Professional Gutter Cleaning Services in Massillon, OH',
+    title: 'Professional Gutter Cleaning Services',
     description: 'Expert gutter cleaning to protect your home from water damage. Free estimates!',
   },
 }
@@ -38,7 +38,7 @@ export default function GutterCleaningPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Professional Gutter Cleaning Services in Massillon, OH
+              Professional Gutter Cleaning Services
             </h1>
             <p className="text-xl mb-8 text-gray-200">
               Keep your gutters clean and functional year-round. Prevent water damage, protect your foundation, and maintain your home's value with professional gutter cleaning.
