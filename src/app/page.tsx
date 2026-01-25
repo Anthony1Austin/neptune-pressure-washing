@@ -120,7 +120,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-neptune-dark-blue/70" aria-hidden="true"></div>
 
         <div className="relative z-10">
-          <p className="text-white text-lg mb-4 font-medium">
+          <p className="hidden sm:block text-white text-lg mb-4 font-medium">
             Click any service above to learn more, or get a free quote today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
