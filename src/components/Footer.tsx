@@ -39,12 +39,12 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-neptune-gold rounded-full flex items-center justify-center">
-                <span className="text-neptune-dark-blue font-bold text-xl">N</span>
-              </div>
-              <div>
-                <div className="font-bold text-xl">NEPTUNE</div>
-                <div className="text-xs text-neptune-gold">PRESSURE WASHING</div>
+              <div className="w-44 h-44 sm:w-48 sm:h-48 -my-8 sm:-my-10 flex items-center justify-center">
+                <img
+                  src="/images/image1.png"
+                  alt="Neptune Pressure Washing logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
             <p className="text-gray-300 mb-4">
