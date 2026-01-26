@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { BeforeAfter } from '@/types'
 
@@ -56,45 +57,70 @@ export default function BeforeAfterGallery({ items, title = "Before & After Gall
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {displayItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              onClick={() => setSelectedItem(index)}
-              className="cursor-pointer group"
-            >
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="relative aspect-video">
-                  <div className="absolute inset-0 flex">
-                    <div className="flex-1 relative overflow-hidden">
-                      <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold z-10">
-                        BEFORE
+          {displayItems.map((item, index) => {
+            const hasBefore = Boolean(item.beforeImage)
+            const hasAfter = Boolean(item.afterImage)
+
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                onClick={() => setSelectedItem(index)}
+                className="cursor-pointer group"
+              >
+                <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="relative aspect-video">
+                    <div className="absolute inset-0 flex">
+                      <div className="flex-1 relative overflow-hidden">
+                        <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold z-10">
+                          BEFORE
+                        </div>
+                        {hasBefore ? (
+                          <Image
+                            src={item.beforeImage}
+                            alt={`${item.service} before`}
+                            fill
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                            <span className="text-gray-400 text-sm">Before Image</span>
+                          </div>
+                        )}
                       </div>
-                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-400 text-sm">Before Image</span>
-                      </div>
-                    </div>
-                    <div className="w-1 bg-neptune-gold"></div>
-                    <div className="flex-1 relative overflow-hidden">
-                      <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold z-10">
-                        AFTER
-                      </div>
-                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-400 text-sm">After Image</span>
+                      <div className="w-1 bg-neptune-gold"></div>
+                      <div className="flex-1 relative overflow-hidden">
+                        <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold z-10">
+                          AFTER
+                        </div>
+                        {hasAfter ? (
+                          <Image
+                            src={item.afterImage}
+                            alt={`${item.service} after`}
+                            fill
+                            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                            className="object-cover"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                            <span className="text-gray-400 text-sm">After Image</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-neptune-dark-blue mb-1">{item.service}</h3>
+                    <p className="text-sm text-gray-600">{item.description}</p>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-neptune-dark-blue mb-1">{item.service}</h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            )
+          })}
         </div>
 
         {displayItems.length === 0 && (
@@ -129,18 +155,38 @@ export default function BeforeAfterGallery({ items, title = "Before & After Gall
                       <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded font-bold z-10">
                         BEFORE
                       </div>
-                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-400">Before Image</span>
-                      </div>
+                      {displayItems[selectedItem].beforeImage ? (
+                        <Image
+                          src={displayItems[selectedItem].beforeImage}
+                          alt={`${displayItems[selectedItem].service} before`}
+                          fill
+                          sizes="100vw"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                          <span className="text-gray-400">Before Image</span>
+                        </div>
+                      )}
                     </div>
                     <div className="w-2 bg-neptune-gold"></div>
                     <div className="flex-1 relative">
                       <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded font-bold z-10">
                         AFTER
                       </div>
-                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-400">After Image</span>
-                      </div>
+                      {displayItems[selectedItem].afterImage ? (
+                        <Image
+                          src={displayItems[selectedItem].afterImage}
+                          alt={`${displayItems[selectedItem].service} after`}
+                          fill
+                          sizes="100vw"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                          <span className="text-gray-400">After Image</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
