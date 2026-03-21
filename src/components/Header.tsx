@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { sortedManualReviews } from '@/lib/reviews'
 import { trackEvent } from '@/lib/gtag'
+import { SocialLinks } from '@/components/SocialLinks'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -85,6 +86,7 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+              <SocialLinks variant="header" />
               <a
                 href="tel:330-412-9330"
                 onClick={() => trackEvent('click_phone', { location: 'header_desktop' })}
@@ -145,6 +147,12 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
+                  <div className="flex justify-center pt-2">
+                    <SocialLinks
+                      variant="header"
+                      onNavigate={() => setIsMobileMenuOpen(false)}
+                    />
+                  </div>
                   <a
                     href="tel:330-412-9330"
                     onClick={() => trackEvent('click_phone', { location: 'header_mobile' })}

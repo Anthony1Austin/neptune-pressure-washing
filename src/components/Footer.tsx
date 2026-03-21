@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { SocialLinks } from '@/components/SocialLinks'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -51,26 +52,7 @@ export default function Footer() {
               Professional pressure washing services in Stark and Summit Counties.
               Licensed, insured, and committed to 100% customer satisfaction.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=100063620580327"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"
-                aria-label="Facebook"
-              >
-                <span className="text-white font-bold">f</span>
-              </a>
-              <a
-                href="https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"
-                aria-label="Yelp"
-              >
-                <span className="text-white font-bold">Y</span>
-              </a>
-            </div>
+            <SocialLinks variant="footer" />
           </div>
 
           {/* Quick Links */}
