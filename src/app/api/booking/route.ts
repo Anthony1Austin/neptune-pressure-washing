@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
     const resend = new Resend(apiKey)
     const from = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
-    const to = process.env.RESEND_TO_EMAIL || 'neptunepwcllc@gmail.com'
+    const to = process.env.RESEND_TO_EMAIL || 'neptunewashpros@gmail.com'
 
     await resend.emails.send({
       from,

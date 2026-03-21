@@ -47,44 +47,63 @@ export default function PricingPage() {
               <div className="space-y-6 mb-8">
                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-neptune-gold">
                   <h3 className="font-bold text-xl text-neptune-dark-blue mb-2">House Washing</h3>
-                  <p className="text-gray-700 mb-2">Small homes (under 1,500 sq ft): Starting at $150</p>
-                  <p className="text-gray-700 mb-2">Medium homes (1,500-2,500 sq ft): $200-$350</p>
-                  <p className="text-gray-700">Large homes (2,500+ sq ft): $350-$500+</p>
-                  <p className="text-sm text-gray-500 mt-2">*Pricing varies based on home size, condition, and accessibility</p>
+                  <p className="text-gray-700 mb-4">Starting at $199 and up.</p>
+                  <a
+                    href="#quote"
+                    className="inline-flex bg-neptune-blue hover:bg-neptune-dark-blue text-white font-bold py-2 px-5 rounded-full transition-all"
+                  >
+                    Get Your Free Estimate
+                  </a>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-neptune-gold">
                   <h3 className="font-bold text-xl text-neptune-dark-blue mb-2">Deck Cleaning</h3>
-                  <p className="text-gray-700 mb-2">Small decks (under 200 sq ft): Starting at $100</p>
-                  <p className="text-gray-700 mb-2">Medium decks (200-400 sq ft): $150-$250</p>
-                  <p className="text-gray-700">Large decks (400+ sq ft): $250-$400+</p>
+                  <p className="text-gray-700 mb-4">Call or text for a quote.</p>
+                  <a
+                    href="#quote"
+                    className="inline-flex bg-neptune-blue hover:bg-neptune-dark-blue text-white font-bold py-2 px-5 rounded-full transition-all"
+                  >
+                    Get Your Free Estimate
+                  </a>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-neptune-gold">
                   <h3 className="font-bold text-xl text-neptune-dark-blue mb-2">Driveway Cleaning</h3>
-                  <p className="text-gray-700 mb-2">Single car driveway: Starting at $75</p>
-                  <p className="text-gray-700 mb-2">Double car driveway: $100-$200</p>
-                  <p className="text-gray-700">Large driveways: $200-$350+</p>
+                  <p className="text-gray-700 mb-4">Starting at $149 and up.</p>
+                  <a
+                    href="#quote"
+                    className="inline-flex bg-neptune-blue hover:bg-neptune-dark-blue text-white font-bold py-2 px-5 rounded-full transition-all"
+                  >
+                    Get Your Free Estimate
+                  </a>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-neptune-gold">
                   <h3 className="font-bold text-xl text-neptune-dark-blue mb-2">Gutter Cleaning</h3>
-                  <p className="text-gray-700 mb-2">Single story: Starting at $100</p>
-                  <p className="text-gray-700 mb-2">Two story: $150-$250</p>
-                  <p className="text-gray-700">Three story+: $250-$400+</p>
+                  <p className="text-gray-700 mb-4">Call or text for a quote.</p>
+                  <a
+                    href="#quote"
+                    className="inline-flex bg-neptune-blue hover:bg-neptune-dark-blue text-white font-bold py-2 px-5 rounded-full transition-all"
+                  >
+                    Get Your Free Estimate
+                  </a>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-neptune-gold">
                   <h3 className="font-bold text-xl text-neptune-dark-blue mb-2">Roof Washing</h3>
-                  <p className="text-gray-700 mb-2">Small roofs (under 1,500 sq ft): Starting at $200</p>
-                  <p className="text-gray-700 mb-2">Medium roofs (1,500-2,500 sq ft): $300-$500</p>
-                  <p className="text-gray-700">Large roofs (2,500+ sq ft): $500-$800+</p>
+                  <p className="text-gray-700 mb-4">Call or text for a quote.</p>
+                  <a
+                    href="#quote"
+                    className="inline-flex bg-neptune-blue hover:bg-neptune-dark-blue text-white font-bold py-2 px-5 rounded-full transition-all"
+                  >
+                    Get Your Free Estimate
+                  </a>
                 </div>
               </div>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
                 <p className="text-neptune-dark-blue font-semibold">
-                  ⚠️ These are general price ranges. Actual pricing may vary based on your specific project. Contact us for a free, personalized estimate!
+                  ⚠️ Pricing may vary based on project size, condition, and accessibility. Call or text us for an exact quote.
                 </p>
               </div>
 

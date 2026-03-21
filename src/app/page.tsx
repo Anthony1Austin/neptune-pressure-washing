@@ -24,7 +24,7 @@ const localBusinessSchema = generateLocalBusinessSchema({
   description: 'Professional pressure washing services in Massillon, Ohio and surrounding areas.',
   url: 'https://www.neptunewashpros.com',
   telephone: '+1-330-412-9330',
-  email: 'neptunepwcllc@gmail.com',
+  email: 'neptunewashpros@gmail.com',
   address: {
     streetAddress: 'Massillon',
     addressLocality: 'Massillon',

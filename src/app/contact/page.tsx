@@ -43,10 +43,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-bold text-lg text-neptune-blue mb-2">Email</h3>
                   <a
-                    href="mailto:neptunepwcllc@gmail.com"
+                    href="mailto:neptunewashpros@gmail.com"
                     className="text-neptune-dark-blue hover:text-neptune-blue transition-colors"
                   >
-                    neptunepwcllc@gmail.com
+                    neptunewashpros@gmail.com
                   </a>
                 </div>
 
