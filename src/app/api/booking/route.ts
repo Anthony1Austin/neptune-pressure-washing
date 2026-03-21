@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import type { BookingFormData } from '@/types'
+import { insertBookingLead } from '@/lib/booking-db'
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,6 +43,8 @@ export async function POST(request: NextRequest) {
         <p><strong>Message:</strong> ${data.message || 'None'}</p>
       `,
     })
+
+    await insertBookingLead(data)
 
     // Return success response
     return NextResponse.json(

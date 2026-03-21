@@ -39,13 +39,14 @@ A modern, award-winning website for Neptune Pressure Washing built with Next.js,
 
 2. **Set up environment variables:**
    ```bash
-   cp .env.local.example .env.local
+   cp .env.example .env.local
    ```
    
-   Then edit `.env.local` with your configuration:
+   Then edit `.env.local` with your configuration (see `.env.example` for all keys):
    - Sanity CMS credentials (if using)
    - Site URL
    - Email service credentials (for booking form)
+   - Admin dashboard / analytics (see **Analytics & admin** below)
 
 3. **Add your house hero image:**
    - Place your house image at `public/images/house-hero.png`
@@ -161,6 +162,22 @@ The booking form is set up with an API route at `/api/booking`. To enable email 
 2. Update `src/app/api/booking/route.ts` with your email service
 3. Configure environment variables
 
+## Analytics & admin dashboard
+
+- **Vercel Analytics**: Included via `@vercel/analytics`. In the Vercel project, enable **Web Analytics** (Speed Insights is optional) so traffic and Web Vitals appear in the Vercel dashboard.
+- **Google Analytics 4 (optional)**: Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` (e.g. `G-XXXXXXXXXX`). The site loads gtag and sends custom events:
+  - `click_phone` — header phone buttons (desktop / mobile)
+  - `generate_lead` — successful booking form submit  
+  Mark these as conversions in GA4 if you want.
+- **Admin dashboard**: Visit `/admin` (sign in at `/admin/login`).
+  - **Required env vars:** `NEXTAUTH_SECRET`, `NEXTAUTH_URL` (production URL, e.g. `https://www.neptunewashpros.com`), `ADMIN_USER`, `ADMIN_PASSWORD`.
+  - Shows counts for reviews, gallery entries, booking leads (if DB configured), and a placeholder for future chat leads.
+- **Booking leads in the database (optional)**: Add Neon Postgres from the Vercel Storage / Marketplace, set `DATABASE_URL`, then run `scripts/booking-leads.sql` in the Neon SQL editor. Successful bookings are still emailed via Resend; rows are inserted when the DB is available.
+
+**Preview deployments:** Preview Basic Auth no longer applies to `/api/auth/*`, so NextAuth sign-in works. You still use `BASIC_AUTH_*` for the rest of the preview site if configured.
+
+**Vercel setup (env vars, checklist, troubleshooting):** see **[VERCEL.md](./VERCEL.md)**.
+
 ## SEO Features
 
 - ✅ Meta tags on all pages
@@ -177,8 +194,8 @@ The booking form is set up with an API route at `/api/booking`. To enable email 
 
 1. Push your code to GitHub
 2. Import project in Vercel
-3. Add environment variables
-4. Deploy!
+3. Add environment variables (see **[VERCEL.md](./VERCEL.md)** for a full checklist: NextAuth, Resend, optional GA4, Neon, preview auth)
+4. Deploy and redeploy after changing env vars
 
 ### Other Platforms
 

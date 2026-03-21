@@ -182,6 +182,17 @@ export default function Footer() {
           <p>
             © {currentYear} Neptune Pressure Washing LLC. All rights reserved. | Licensed & Insured
           </p>
+          <p className="mt-2 text-gray-500 text-sm">
+            Website by{' '}
+            <a
+              href="https://webopsdevelopment.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neptune-gold hover:underline"
+            >
+              WebOps Development
+            </a>
+          </p>
         </div>
       </div>
     </footer>

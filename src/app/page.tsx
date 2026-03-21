@@ -6,7 +6,7 @@ import ProminentTrustBadges from '@/components/ProminentTrustBadges'
 import BeforeAfterGallery from '@/components/BeforeAfterGallery'
 import ServiceCard from '@/components/ServiceCard'
 import { generateLocalBusinessSchema } from '@/lib/schema'
-import type { BeforeAfter } from '@/types'
+import { beforeAfterGalleryItems } from '@/lib/before-after-items'
 
 export const metadata: Metadata = {
   title: 'Professional Pressure Washing Services in Massillon, OH',
@@ -80,38 +80,6 @@ const services = [
     icon: '🌳',
   },
 ]
-
-const beforeAfterItems: BeforeAfter[] = [
-  {
-    id: 'driveway-cleaning-dw',
-    service: 'Driveway Cleaning',
-    beforeImage: '/images/B_A_Pics/DW_B.png',
-    afterImage: '/images/B_A_Pics/DW_A.png',
-    description: 'Driveway cleaning transformation.',
-  },
-  {
-    id: 'placeholder-1',
-    service: 'House Washing',
-    beforeImage: '/images/B_A_Pics/HS_B.png',
-    afterImage: '/images/B_A_Pics/HS_A.png',
-    description: 'House washing transformation.',
-  },
-  {
-    id: 'placeholder-2',
-    service: 'Concrete Cleaning',
-    beforeImage: '/images/B_A_Pics/CC_B.png',
-    afterImage: '/images/B_A_Pics/CC_A.png',
-    description: 'Concrete cleaning transformation.',
-  },
-  {
-    id: 'placeholder-3',
-    service: 'Brick Cleaning',
-    beforeImage: '/images/B_A_Pics/BR_B.png',
-    afterImage: '/images/B_A_Pics/BR_A.png',
-    description: 'Brick cleaning transformation.',
-  },
-]
-
 
 export default function HomePage() {
   return (
@@ -204,7 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* Before & After Gallery */}
-      <BeforeAfterGallery items={beforeAfterItems} />
+      <BeforeAfterGallery items={beforeAfterGalleryItems} />
 
       {/* CTA Section */}
       <CTASection />

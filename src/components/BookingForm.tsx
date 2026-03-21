@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
 import type { BookingFormData } from '@/types'
+import { trackEvent } from '@/lib/gtag'
 
 export default function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -25,6 +26,7 @@ export default function BookingForm() {
       if (response.ok) {
         setSubmitStatus('success')
         reset()
+        trackEvent('generate_lead', { method: 'booking_form' })
       } else {
         setSubmitStatus('error')
       }

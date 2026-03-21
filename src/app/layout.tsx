@@ -3,6 +3,8 @@ import { Merriweather, Open_Sans } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { Providers } from '@/components/Providers'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import { generateOrganizationSchema } from '@/lib/schema'
 
 const merriweather = Merriweather({
@@ -79,11 +81,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`${openSans.className} ${merriweather.variable} ${openSans.variable} overflow-x-hidden`}>
-        <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <GoogleAnalytics />
+        <Providers>
+          <Header />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
