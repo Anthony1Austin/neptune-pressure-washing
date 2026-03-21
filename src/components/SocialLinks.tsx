@@ -1,6 +1,7 @@
 'use client'
 
-import { FaFacebookF, FaYelp } from 'react-icons/fa'
+import { FaFacebookF, FaGoogle, FaYelp } from 'react-icons/fa'
+import { GOOGLE_REVIEWS_URL } from '@/lib/google-reviews-url'
 import { trackEvent } from '@/lib/gtag'
 
 const SOCIAL_LINKS = [
@@ -9,6 +10,12 @@ const SOCIAL_LINKS = [
     label: 'Facebook',
     network: 'facebook',
     Icon: FaFacebookF,
+  },
+  {
+    href: GOOGLE_REVIEWS_URL,
+    label: 'Google reviews',
+    network: 'google_reviews',
+    Icon: FaGoogle,
   },
   {
     href: 'https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing',
