@@ -92,7 +92,7 @@ export default function Header() {
                 onClick={() => trackEvent('click_phone', { location: 'header_desktop' })}
                 className="bg-neptune-gold text-neptune-dark-blue px-6 py-2 rounded-full font-bold hover:bg-neptune-gold/90 transition-colors"
               >
-              Call 330-412-9330
+              Call or Text 330-412-9330
               </a>
             </div>
 
@@ -158,7 +158,7 @@ export default function Header() {
                     onClick={() => trackEvent('click_phone', { location: 'header_mobile' })}
                     className="bg-neptune-gold text-neptune-dark-blue px-6 py-3 rounded-full font-bold text-center hover:bg-neptune-gold/90 transition-colors"
                   >
-                    Call 330-412-9330
+                    Call or Text 330-412-9330
                   </a>
                 </div>
               </motion.div>

@@ -133,7 +133,7 @@ export default function HomePage() {
               href="tel:330-412-9330"
               className="bg-neptune-gold hover:bg-neptune-gold/90 text-neptune-dark-blue font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Call 330-412-9330
+              Call or Text 330-412-9330
             </a>
           </div>
         </div>

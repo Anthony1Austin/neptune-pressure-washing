@@ -191,7 +191,7 @@ export default function BookingForm() {
         >
           <p className="font-semibold">Something went wrong.</p>
           <p className="text-sm mt-1">
-            Please call us at <a href="tel:330-412-9330" className="underline font-bold">330-412-9330</a> or try again.
+            Please call or text us at <a href="tel:330-412-9330" className="underline font-bold">330-412-9330</a> or try again.
           </p>
         </motion.div>
       )}

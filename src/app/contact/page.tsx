@@ -4,7 +4,7 @@ import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: 'Contact Neptune Pressure Washing | Massillon, OH | Free Estimates',
-  description: 'Contact Neptune Pressure Washing for professional pressure washing services in Massillon, Ohio. Call 330-412-9330 or request a free quote online.',
+  description: 'Contact Neptune Pressure Washing for professional pressure washing services in Massillon, Ohio. Call or Text 330-412-9330 or request a free quote online.',
   keywords: 'contact neptune pressure washing, pressure washing massillon ohio phone number, free pressure washing estimate',
 }
 
@@ -13,7 +13,7 @@ export default function ContactPage() {
     <>
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl md:pl-4 lg:pl-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl mb-8 text-gray-200">
               Get in touch for a free estimate or to schedule your service
@@ -35,7 +35,7 @@ export default function ContactPage() {
                     href="tel:330-412-9330"
                     className="text-neptune-dark-blue text-xl font-bold hover:text-neptune-blue transition-colors"
                   >
-                    330-412-9330
+                    Call or Text 330-412-9330
                   </a>
                   <p className="text-gray-600 text-sm mt-1">Call or text anytime</p>
                 </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
 
       <CTASection
         title="Prefer to Talk?"
-        description="Give us a call at 330-412-9330 - we're here to help!"
+        description="Give us a call or text at 330-412-9330 - we're here to help!"
       />
     </>
   )

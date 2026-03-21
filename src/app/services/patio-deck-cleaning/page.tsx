@@ -30,7 +30,7 @@ export default function PatioDeckCleaningPage() {
             <p className="text-xl mb-8 text-gray-200">Transform your outdoor living spaces with expert patio and deck cleaning.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#quote" className="bg-neptune-gold hover:bg-neptune-gold/90 text-neptune-dark-blue font-bold py-4 px-8 rounded-full">Get Free Quote</a>
-              <a href="tel:330-412-9330" className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-neptune-blue">Call 330-412-9330</a>
+              <a href="tel:330-412-9330" className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-neptune-blue">Call or Text 330-412-9330</a>
             </div>
           </div>
         </div>

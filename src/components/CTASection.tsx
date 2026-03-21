@@ -18,7 +18,7 @@ export default function CTASection({
   description = "Get your free quote today and discover why Neptune Pressure Washing is the trusted choice.",
   primaryButtonText = "Get Free Quote",
   primaryButtonLink = "/contact",
-  secondaryButtonText = "Call 330-412-9330",
+  secondaryButtonText = "Call or Text 330-412-9330",
   secondaryButtonLink = "tel:330-412-9330",
   variant = 'default',
 }: CTASectionProps) {

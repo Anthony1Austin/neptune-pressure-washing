@@ -13,11 +13,20 @@ export default function AboutPage() {
     <>
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Neptune Pressure Washing</h1>
-            <p className="text-xl mb-8 text-gray-200">
-              Locally owned and operated, serving Stark and Summit Counties with excellence.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 lg:gap-24 items-center">
+            <div className="max-w-3xl md:pl-4 lg:pl-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">About Neptune Pressure Washing</h1>
+              <p className="text-xl mb-8 text-gray-200">
+                Locally owned and operated, serving Stark and Summit Counties with excellence.
+              </p>
+            </div>
+            <div className="flex md:justify-center">
+              <img
+                src="/images/Thomas.jpg"
+                alt="Thomas from Neptune Pressure Washing"
+                className="w-full max-w-[152px] md:max-w-[192px] rounded-2xl shadow-2xl object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

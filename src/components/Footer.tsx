@@ -124,7 +124,7 @@ export default function Footer() {
                   href="tel:330-412-9330"
                   className="text-white font-bold hover:text-neptune-gold transition-colors"
                 >
-                  330-412-9330
+                  Call or Text 330-412-9330
                 </a>
               </div>
               <div>

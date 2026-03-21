@@ -83,7 +83,7 @@ export default function FAQPage() {
 
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl md:pl-4 lg:pl-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
             <p className="text-xl mb-8 text-gray-200">
               Common questions about our pressure washing services
@@ -123,7 +123,7 @@ export default function FAQPage() {
                   href="tel:330-412-9330"
                   className="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-neptune-blue transition-all"
                 >
-                  Call 330-412-9330
+                  Call or Text 330-412-9330
                 </a>
               </div>
             </div>

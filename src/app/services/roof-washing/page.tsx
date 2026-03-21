@@ -54,7 +54,7 @@ export default function RoofWashingPage() {
                 href="tel:330-412-9330"
                 className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-neptune-blue transition-all duration-300"
               >
-                Call 330-412-9330
+                Call or Text 330-412-9330
               </a>
             </div>
           </div>

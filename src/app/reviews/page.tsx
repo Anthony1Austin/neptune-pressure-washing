@@ -14,7 +14,7 @@ export default function ReviewsPage() {
     <>
       <section className="bg-gradient-to-br from-neptune-blue to-neptune-dark-blue text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl md:pl-4 lg:pl-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Customer Reviews</h1>
             <p className="text-xl mb-8 text-gray-200">
               See what our satisfied customers have to say about our services
