@@ -35,4 +35,6 @@ export interface BookingFormData {
   preferredDate?: string
   preferredTime?: string
   message?: string
+  /** Set by the client when Turnstile is enabled; stripped before DB/email bodies */
+  turnstileToken?: string
 }

@@ -65,17 +65,17 @@ If you add email later, configure MX/TXT at Cloudflare as **DNS only** and use y
 
 ---
 
-## 5. Cloudflare Turnstile (optional)
+## 5. Cloudflare Turnstile (booking form)
 
-Not wired in this repo yet. If you add Turnstile to forms:
+The booking form uses Turnstile when both variables are set:
 
 | Variable | Where |
 |----------|--------|
-| `TURNSTILE_SITE_KEY` | Public (e.g. `NEXT_PUBLIC_…` if used in browser) |
-| `TURNSTILE_SECRET_KEY` | Server-only (Vercel env, never commit) |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Vercel (public; embedded in the browser bundle) |
+| `TURNSTILE_SECRET_KEY` | Vercel only (server-side verification in `/api/booking`) |
 
-- Verify the token on the server (e.g. in `/api/booking`).
-- If you add **Content-Security-Policy** headers, allow Turnstile: `script-src` / `frame-src` must include `https://challenges.cloudflare.com` (exact directives depend on your CSP). This project does not set CSP in `next.config.js` today.
+- Create a Turnstile widget in the Cloudflare dashboard and add your production (and preview, if needed) hostnames.
+- If you add **Content-Security-Policy** headers, allow Turnstile: `script-src` / `frame-src` must include `https://challenges.cloudflare.com`. This project does not set CSP in `next.config.js` today.
 
 ---
 

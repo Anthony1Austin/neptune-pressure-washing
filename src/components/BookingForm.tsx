@@ -1,34 +1,64 @@
 'use client'
 
-import { useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 import type { BookingFormData } from '@/types'
 import { trackEvent } from '@/lib/gtag'
+
+const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ''
 
 export default function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
+  const [turnstileError, setTurnstileError] = useState<string | null>(null)
+  const turnstileRef = useRef<TurnstileInstance | null>(null)
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<BookingFormData>()
 
+  const onTurnstileSuccess = useCallback((token: string) => {
+    setTurnstileToken(token)
+    setTurnstileError(null)
+  }, [])
+
+  const onTurnstileExpire = useCallback(() => {
+    setTurnstileToken(null)
+  }, [])
+
   const onSubmit = async (data: BookingFormData) => {
+    if (turnstileSiteKey && !turnstileToken) {
+      setTurnstileError('Please complete the verification below.')
+      return
+    }
+
     setIsSubmitting(true)
     setSubmitStatus('idle')
-    
+    setTurnstileError(null)
+
     try {
+      const payload: BookingFormData = {
+        ...data,
+        ...(turnstileToken ? { turnstileToken } : {}),
+      }
+
       const response = await fetch('/api/booking', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       })
       
       if (response.ok) {
         setSubmitStatus('success')
         reset()
+        setTurnstileToken(null)
+        turnstileRef.current?.reset()
         trackEvent('generate_lead', { method: 'booking_form' })
       } else {
         setSubmitStatus('error')
+        turnstileRef.current?.reset()
+        setTurnstileToken(null)
       }
     } catch (error) {
       setSubmitStatus('error')
@@ -171,6 +201,21 @@ export default function BookingForm() {
           placeholder="Tell us about your project, any specific concerns, or questions..."
         />
       </div>
+
+      {turnstileSiteKey ? (
+        <div className="flex flex-col items-center gap-2">
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={turnstileSiteKey}
+            onSuccess={onTurnstileSuccess}
+            onExpire={onTurnstileExpire}
+            options={{ theme: 'light' }}
+          />
+          {turnstileError && (
+            <p className="text-sm text-red-600 text-center">{turnstileError}</p>
+          )}
+        </div>
+      ) : null}
 
       {submitStatus === 'success' && (
         <motion.div

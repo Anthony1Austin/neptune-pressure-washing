@@ -43,6 +43,15 @@ These power NextAuth and the credentials login at `/admin/login`.
 
 Without `RESEND_API_KEY`, the booking API returns 500 (by design).
 
+### Cloudflare Turnstile (spam protection on booking form)
+
+| Variable | Notes |
+|----------|--------|
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Site key from [Cloudflare Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile) |
+| `TURNSTILE_SECRET_KEY` | Secret key (same widget); required for server verification |
+
+If `TURNSTILE_SECRET_KEY` is set, `/api/booking` rejects requests without a valid Turnstile token. If the secret is unset, verification is skipped (useful for local dev without keys). For production, set both keys and add your domain hostnames to the Turnstile widget.
+
 ---
 
 ## 4. Optional: Google Analytics 4
