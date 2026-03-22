@@ -2,6 +2,8 @@
 
 Step-by-step for environment variables, admin login, analytics, and optional database.
 
+**Cloudflare in front of Vercel (proxied DNS):** see [CLOUDFLARE.md](./CLOUDFLARE.md).
+
 ---
 
 ## 1. Connect the project
