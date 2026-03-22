@@ -172,7 +172,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-neptune-gold hover:underline"
             >
-              WebOps Development
+              WebOps Developement LLC
             </a>
           </p>
         </div>
