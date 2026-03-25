@@ -76,7 +76,7 @@ export default function ContactPage() {
                       <span className="text-white font-bold">f</span>
                     </a>
                     <a
-                      href="https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing"
+                      href="https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 bg-neptune-blue rounded-full flex items-center justify-center hover:bg-neptune-gold transition-colors"

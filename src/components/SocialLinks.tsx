@@ -18,7 +18,7 @@ const SOCIAL_LINKS = [
     Icon: FaGoogle,
   },
   {
-    href: 'https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune+Pressure+Washing',
+    href: 'https://www.yelp.com/biz/neptune-pressure-washing-massillon?osq=Neptune',
     label: 'Yelp',
     network: 'yelp',
     Icon: FaYelp,
