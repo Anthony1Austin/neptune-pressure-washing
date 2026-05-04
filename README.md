@@ -178,6 +178,37 @@ The booking form is set up with an API route at `/api/booking`. To enable email 
 
 **Vercel setup (env vars, checklist, troubleshooting):** see **[VERCEL.md](./VERCEL.md)**.
 
+## Client update automation (approval before sending)
+
+After you finish a website change, you can draft and approve a short client status update from the latest commit:
+
+```bash
+npm run client:update
+```
+
+What it does:
+- Pulls the latest commit subject and changed files.
+- Generates a short, client-friendly summary draft.
+- Prompts for approval before sending.
+- Sends only after approval, then appends an entry to `logs/client-update-log.md`.
+
+Setup required in `.env.local` (or Vercel env vars):
+- For email:
+  - `RESEND_API_KEY`
+  - `CLIENT_UPDATE_TO_EMAIL`
+  - `CLIENT_UPDATE_FROM_EMAIL` (or fallback to `RESEND_FROM_EMAIL`)
+- For text message (Twilio):
+  - `TWILIO_ACCOUNT_SID`
+  - `TWILIO_AUTH_TOKEN`
+  - `TWILIO_FROM_NUMBER`
+  - `CLIENT_UPDATE_TO_PHONE`
+
+Useful options:
+- `npm run client:update -- --dry-run` (preview + log only, never sends)
+- `npm run client:update -- --summary "Your custom short message"` (override generated text)
+- `npm run client:update -- --commit HEAD~1` (draft from a different commit)
+- `npm run client:update -- --channel email|sms|both` (default: `email`)
+
 ## SEO Features
 
 - ✅ Meta tags on all pages
