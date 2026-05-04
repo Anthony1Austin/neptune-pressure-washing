@@ -11,6 +11,16 @@ export type ManualReview = {
 
 export const manualReviews: ManualReview[] = [
   {
+    name: 'E F',
+    totalReviews: '6 reviews',
+    rating: 5,
+    date: '2026-04-27',
+    dateLabel: 'a week ago',
+    highlight: '“Extremely professional approach on large projects.”',
+    text:
+      'Working for a large Health System, we have used Neptune on a number of projects. Extremely professional approach to handling a lot of different cleaning and washing projects. I would highly recommend Neptune - Thomas, on any project!!',
+  },
+  {
     name: 'Karen Todd',
     totalReviews: '3 reviews',
     rating: 5,
