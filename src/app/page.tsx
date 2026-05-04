@@ -4,9 +4,11 @@ import CTASection from '@/components/CTASection'
 import TrustBadges from '@/components/TrustBadges'
 import ProminentTrustBadges from '@/components/ProminentTrustBadges'
 import BeforeAfterGallery from '@/components/BeforeAfterGallery'
+import FeaturedResults from '@/components/FeaturedResults'
 import ServiceCard from '@/components/ServiceCard'
 import { generateLocalBusinessSchema } from '@/lib/schema'
 import { beforeAfterGalleryItems } from '@/lib/before-after-items'
+import { featuredResults } from '@/lib/featured-results'
 
 export const metadata: Metadata = {
   title: 'Professional Pressure Washing Services in Massillon, OH',
@@ -173,6 +175,9 @@ export default function HomePage() {
 
       {/* Before & After Gallery */}
       <BeforeAfterGallery items={beforeAfterGalleryItems} />
+
+      {/* Featured Finished Results */}
+      <FeaturedResults items={featuredResults} />
 
       {/* CTA Section */}
       <CTASection />

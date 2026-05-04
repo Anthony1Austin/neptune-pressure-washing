@@ -26,6 +26,13 @@ export interface BeforeAfter {
   description: string
 }
 
+export interface FeaturedResult {
+  id: string
+  title: string
+  image: string
+  description: string
+}
+
 export interface BookingFormData {
   name: string
   email: string
