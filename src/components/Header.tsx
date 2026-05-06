@@ -66,9 +66,9 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 ml-4">
-              <div className="w-52 h-52 sm:w-56 sm:h-56 -my-8 sm:-my-10 flex items-center justify-center">
+              <div className="w-60 h-60 sm:w-64 sm:h-64 -my-10 sm:-my-12 flex items-center justify-center">
                 <img
-                  src="/images/image1.png"
+                  src="/images/3802.PNG"
                   alt="Neptune Pressure Washing logo"
                   className="w-full h-full object-contain"
                 />

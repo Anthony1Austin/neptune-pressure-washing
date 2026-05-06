@@ -40,9 +40,9 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-44 h-44 sm:w-48 sm:h-48 -my-8 sm:-my-10 flex items-center justify-center">
+              <div className="w-48 h-48 sm:w-52 sm:h-52 -my-9 sm:-my-11 flex items-center justify-center">
                 <img
-                  src="/images/image1.png"
+                  src="/images/3802.PNG"
                   alt="Neptune Pressure Washing logo"
                   className="w-full h-full object-contain"
                 />

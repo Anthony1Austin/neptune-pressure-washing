@@ -110,7 +110,7 @@ export function generateOrganizationSchema() {
     '@type': 'Organization',
     name: 'Neptune Pressure Washing',
     url: 'https://www.neptunewashpros.com',
-    logo: 'https://www.neptunewashpros.com/images/logo.png',
+    logo: 'https://www.neptunewashpros.com/images/3802.PNG',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-330-412-9330',
