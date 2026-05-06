@@ -1,5 +1,7 @@
 // Schema markup generator for SEO
 
+import { LOGO_ABSOLUTE_URL } from '@/lib/site-assets'
+
 export interface LocalBusinessSchema {
   name: string
   description: string
@@ -110,7 +112,7 @@ export function generateOrganizationSchema() {
     '@type': 'Organization',
     name: 'Neptune Pressure Washing',
     url: 'https://www.neptunewashpros.com',
-    logo: 'https://www.neptunewashpros.com/images/3802.PNG',
+    logo: LOGO_ABSOLUTE_URL,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-330-412-9330',

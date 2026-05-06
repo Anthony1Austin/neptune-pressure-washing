@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { SocialLinks } from '@/components/SocialLinks'
+import { LOGO_SRC } from '@/lib/site-assets'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -42,7 +43,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-48 h-48 sm:w-52 sm:h-52 -my-9 sm:-my-11 flex items-center justify-center">
                 <img
-                  src="/images/3802.PNG"
+                  src={LOGO_SRC}
                   alt="Neptune Pressure Washing logo"
                   className="w-full h-full object-contain"
                 />

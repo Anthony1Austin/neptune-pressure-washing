@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { sortedManualReviews } from '@/lib/reviews'
 import { trackEvent } from '@/lib/gtag'
 import { SocialLinks } from '@/components/SocialLinks'
+import { LOGO_SRC } from '@/lib/site-assets'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -68,7 +69,7 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-3 ml-4">
               <div className="w-60 h-60 sm:w-64 sm:h-64 -my-10 sm:-my-12 flex items-center justify-center">
                 <img
-                  src="/images/3802.PNG"
+                  src={LOGO_SRC}
                   alt="Neptune Pressure Washing logo"
                   className="w-full h-full object-contain"
                 />
