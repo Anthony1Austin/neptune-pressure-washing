@@ -4,10 +4,10 @@ import type { BeforeAfter } from '@/types'
 export const beforeAfterGalleryItems: BeforeAfter[] = [
   {
     id: 'summa-health-cleaning',
-    service: 'Summa Health',
+    service: 'Commercial — Summa Health',
     beforeImage: '/images/B_A_Pics/Summa Health_B.jpg',
     afterImage: '/images/B_A_Pics/Summa Health_A.jpg',
-    description: 'Before and after exterior cleaning at Summa Health.',
+    description: 'Before and after commercial exterior cleaning at a healthcare campus.',
   },
   {
     id: 'driveway-cleaning-dw',

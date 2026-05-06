@@ -4,8 +4,10 @@ import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: 'Contact Neptune Pressure Washing | Massillon, OH | Free Estimates',
-  description: 'Contact Neptune Pressure Washing for professional pressure washing services in Massillon, Ohio. Call or Text 330-412-9330 or request a free quote online.',
-  keywords: 'contact neptune pressure washing, pressure washing massillon ohio phone number, free pressure washing estimate',
+  description:
+    'Contact Neptune Pressure Washing for residential or commercial pressure washing in Massillon, Ohio. Call or text 330-412-9330 or request a free quote online.',
+  keywords:
+    'contact neptune pressure washing, commercial pressure washing estimate, pressure washing massillon ohio phone number, free pressure washing estimate',
 }
 
 export default function ContactPage() {
@@ -16,7 +18,8 @@ export default function ContactPage() {
           <div className="max-w-3xl md:pl-4 lg:pl-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl mb-8 text-gray-200">
-              Get in touch for a free estimate or to schedule your service
+              Get in touch for a free estimate or to schedule service — residential jobs, commercial buildings, and
+              multi-site work welcome.
             </p>
           </div>
         </div>
@@ -24,6 +27,12 @@ export default function ContactPage() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto mb-10 rounded-xl border border-neptune-gold/40 bg-neptune-dark-blue/5 px-6 py-4 text-center text-neptune-dark-blue">
+            <p className="text-base md:text-lg font-medium">
+              <strong>Commercial & multi-site:</strong> include property address, approximate scope, and best contact
+              for approvals — we will follow up with a tailored quote.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Information */}
             <div>
@@ -95,7 +104,8 @@ export default function ContactPage() {
                 Request a Free Quote
               </h2>
               <p className="text-gray-600 mb-6">
-                Fill out the form below and we'll contact you within 24 hours with a free estimate for your project.
+                Fill out the form below and we will contact you within 24 hours. For commercial work, note access and
+                scope in the details field so we can quote accurately.
               </p>
               <BookingForm />
             </div>

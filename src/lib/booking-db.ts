@@ -13,6 +13,12 @@ export async function insertBookingLead(data: BookingFormData): Promise<boolean>
   try {
     const { neon } = await import('@neondatabase/serverless')
     const sql = neon(url)
+    const messageParts = [
+      data.propertyType ? `Property type: ${data.propertyType}` : null,
+      data.message?.trim() ? data.message : null,
+    ].filter(Boolean)
+    const messageForDb = messageParts.length ? messageParts.join('\n\n') : null
+
     await sql`
       INSERT INTO booking_leads (
         name,
@@ -32,7 +38,7 @@ export async function insertBookingLead(data: BookingFormData): Promise<boolean>
         ${data.address},
         ${data.preferredDate ?? null},
         ${data.preferredTime ?? null},
-        ${data.message ?? null}
+        ${messageForDb}
       )
     `
     return true

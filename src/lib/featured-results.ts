@@ -4,9 +4,9 @@ import type { FeaturedResult } from '@/types'
 export const featuredResults: FeaturedResult[] = [
   {
     id: 'summa-health-final',
-    title: 'Summa Health - Final Result',
+    title: 'Commercial — Summa Health campus',
     image: '/images/B_A_Pics/Summa Health_All.jpg',
     description:
-      'A full-property final result after professional exterior cleaning at Summa Health.',
+      'Finished exterior cleaning across a large healthcare campus — the kind of scale and professionalism we bring to commercial work.',
   },
 ]

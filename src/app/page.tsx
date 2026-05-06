@@ -12,18 +12,22 @@ import { featuredResults } from '@/lib/featured-results'
 
 export const metadata: Metadata = {
   title: 'Professional Pressure Washing Services in Massillon, OH',
-  description: 'Neptune Pressure Washing offers professional exterior cleaning services in Massillon, Ohio. House washing, roof cleaning, deck restoration, gutter cleaning, and more. Licensed, insured, 100% satisfaction guaranteed. Free estimates!',
-  keywords: 'pressure washing massillon ohio, house washing massillon, deck cleaning massillon, gutter cleaning massillon, roof washing massillon, power washing massillon ohio, professional pressure washing',
+  description:
+    'Neptune Pressure Washing offers residential and commercial exterior cleaning in Massillon, Ohio: house washing, roof cleaning, concrete, storefronts, campuses, and more. Licensed, insured, 100% satisfaction guaranteed. Free estimates!',
+  keywords:
+    'pressure washing massillon ohio, commercial pressure washing massillon ohio, house washing massillon, deck cleaning massillon, gutter cleaning massillon, roof washing massillon, storefront cleaning, building exterior cleaning, professional pressure washing',
   openGraph: {
     title: 'Neptune Pressure Washing - Professional Exterior Cleaning in Massillon, OH',
-    description: 'Professional pressure washing services in Massillon, Ohio. Licensed, insured, and 100% satisfaction guaranteed.',
+    description:
+      'Residential and commercial pressure washing in Massillon, Ohio. Licensed, insured, and 100% satisfaction guaranteed.',
     url: 'https://www.neptunewashpros.com',
   },
 }
 
 const localBusinessSchema = generateLocalBusinessSchema({
   name: 'Neptune Pressure Washing',
-  description: 'Professional pressure washing services in Massillon, Ohio and surrounding areas.',
+  description:
+    'Residential and commercial pressure washing and exterior cleaning in Massillon, Ohio and surrounding areas.',
   url: 'https://www.neptunewashpros.com',
   telephone: '+1-330-412-9330',
   email: 'neptunewashpros@gmail.com',
@@ -93,7 +97,6 @@ export default function HomePage() {
 
       {/* Hero Section - House Image Background */}
       <section className="relative w-full text-white bg-neptune-dark-blue pb-2 sm:pb-0 sm:bg-gradient-to-b sm:from-[#c8b3d6] sm:via-[#d8c6e0] sm:to-[#c8b3d6]">
-        {/* Background house + bubbles */}
         <div className="w-full">
           <InteractiveHouse />
         </div>
@@ -101,13 +104,22 @@ export default function HomePage() {
         {/* Hero Text Overlay */}
         <div className="relative z-10 mt-6 md:mt-0 md:absolute md:top-0 md:left-0 md:right-0 md:z-30 pointer-events-none">
           <div className="container mx-auto px-4 pt-6 sm:pt-10 md:pt-16 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 animate-fade-in drop-shadow-lg">
+            <h1 className="mb-4 animate-fade-in text-3xl font-bold text-white drop-shadow-lg [text-shadow:0_2px_8px_rgba(15,31,53,0.55),0_4px_20px_rgba(15,31,53,0.35)] sm:text-4xl md:text-6xl">
               Expert Power Cleaning
             </h1>
-            <p className="text-base sm:text-xl md:text-2xl mb-0 sm:mb-6 text-gray-200 max-w-3xl mx-auto drop-shadow">
-              Revitalize Your Property with Our Professional and Eco-Friendly Pressure Washing Services
-            </p>
-          
+            <div className="mx-auto mb-0 flex max-w-3xl flex-col items-center gap-3 sm:mb-6 sm:gap-4">
+              <p className="text-center text-[0.65rem] font-bold uppercase tracking-[0.28em] text-neptune-gold [text-shadow:0_0_2px_rgba(15,31,53,1),0_0_4px_rgba(15,31,53,0.85),0_1px_0_rgba(15,31,53,0.95),0_2px_4px_rgba(15,31,53,0.95),0_3px_10px_rgba(15,31,53,0.8),0_4px_20px_rgba(15,31,53,0.55)] sm:text-xs md:text-sm">
+                Residential & commercial · exterior cleaning
+              </p>
+              <div className="flex flex-col gap-0.5 text-center leading-snug sm:gap-1">
+                <p className="text-base font-normal text-white [text-shadow:0_1px_3px_rgba(15,31,53,0.75),0_2px_12px_rgba(15,31,53,0.4)] sm:text-lg md:text-xl">
+                  Revitalize your property with <span className="font-bold">professional,</span>
+                </p>
+                <p className="text-base font-normal text-white [text-shadow:0_1px_3px_rgba(15,31,53,0.75),0_2px_12px_rgba(15,31,53,0.4)] sm:text-lg md:text-xl">
+                  <span className="font-bold">eco-friendly</span> pressure washing.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -144,9 +156,6 @@ export default function HomePage() {
       {/* Prominent Trust Badges */}
       <ProminentTrustBadges />
 
-      {/* Why Choose Us */}
-      <TrustBadges />
-
       {/* Services Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -155,7 +164,8 @@ export default function HomePage() {
               Complete Exterior Cleaning Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From house washing to deck restoration, we provide comprehensive cleaning services for your property
+              From house washing to deck restoration, we handle homes plus commercial sites — retail, offices, healthcare
+              campuses, HOAs, and multi-building properties throughout the area.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,6 +188,9 @@ export default function HomePage() {
 
       {/* Featured Finished Results */}
       <FeaturedResults items={featuredResults} />
+
+      {/* Why Choose Us */}
+      <TrustBadges />
 
       {/* CTA Section */}
       <CTASection />

@@ -118,6 +118,26 @@ export default function BookingForm() {
           {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
         </div>
 
+        <div className="md:col-span-2">
+          <label htmlFor="propertyType" className="block text-sm font-medium text-neptune-dark-blue mb-2">
+            Property type *
+          </label>
+          <select
+            {...register('propertyType', { required: 'Please select a property type' })}
+            id="propertyType"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-neptune-blue focus:border-transparent transition-all"
+          >
+            <option value="">Select property type...</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial / business</option>
+            <option value="hoa">HOA / multi-site</option>
+            <option value="other">Other</option>
+          </select>
+          {errors.propertyType && (
+            <p className="mt-1 text-sm text-red-600">{errors.propertyType.message}</p>
+          )}
+        </div>
+
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-neptune-dark-blue mb-2">
             Service Needed *
@@ -198,7 +218,7 @@ export default function BookingForm() {
           id="message"
           rows={4}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-neptune-blue focus:border-transparent transition-all"
-          placeholder="Tell us about your project, any specific concerns, or questions..."
+          placeholder="For commercial or large jobs, note approximate square footage, access (gates, loading areas), and scope. Any specific concerns or questions?"
         />
       </div>
 

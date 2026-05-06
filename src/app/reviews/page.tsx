@@ -5,8 +5,10 @@ import { sortedManualReviews, renderStars } from '@/lib/reviews'
 
 export const metadata: Metadata = {
   title: 'Customer Reviews & Testimonials | Neptune Pressure Washing',
-  description: 'Read what our satisfied customers have to say about Neptune Pressure Washing services in Massillon, Ohio. Real reviews from real customers.',
-  keywords: 'neptune pressure washing reviews, pressure washing testimonials massillon ohio, customer reviews',
+  description:
+    'Reviews from homeowners and commercial clients for Neptune Pressure Washing in Massillon, Ohio — residential and large-scale exterior cleaning projects.',
+  keywords:
+    'neptune pressure washing reviews, commercial pressure washing reviews, pressure washing testimonials massillon ohio, customer reviews',
 }
 
 export default function ReviewsPage() {
@@ -17,7 +19,8 @@ export default function ReviewsPage() {
           <div className="max-w-3xl md:pl-4 lg:pl-6">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Customer Reviews</h1>
             <p className="text-xl mb-8 text-gray-200">
-              See what our satisfied customers have to say about our services
+              Homeowners and commercial clients share what it is like to work with us — from single homes to large
+              facilities.
             </p>
           </div>
         </div>
@@ -30,7 +33,7 @@ export default function ReviewsPage() {
               Don't Just Take Our Word For It
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              See what our satisfied customers have to say about our services
+              Real feedback from residential and commercial projects across Northeast Ohio.
             </p>
           </div>
 

@@ -37,6 +37,7 @@ export interface BookingFormData {
   name: string
   email: string
   phone: string
+  propertyType: string
   service: string
   address: string
   preferredDate?: string

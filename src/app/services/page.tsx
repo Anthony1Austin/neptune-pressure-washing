@@ -5,8 +5,10 @@ import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: 'All Pressure Washing Services',
-  description: 'Complete list of professional pressure washing services offered by Neptune Pressure Washing in Massillon, Ohio. House washing, roof cleaning, deck restoration, and more.',
-  keywords: 'pressure washing services massillon ohio, house washing, roof cleaning, deck cleaning, gutter cleaning, concrete cleaning, patio cleaning',
+  description:
+    'Residential and commercial pressure washing in Massillon, Ohio: house washing, roof cleaning, concrete, storefronts, campuses, and more from Neptune Pressure Washing.',
+  keywords:
+    'pressure washing services massillon ohio, commercial pressure washing, house washing, roof cleaning, deck cleaning, gutter cleaning, concrete cleaning, building exterior cleaning, patio cleaning',
 }
 
 const allServices = [
@@ -81,13 +83,18 @@ export default function ServicesPage() {
             Our Professional Pressure Washing Services
           </h1>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Comprehensive exterior cleaning solutions for residential and commercial properties in Massillon, Ohio and surrounding areas
+            Comprehensive exterior cleaning for homes, businesses, retail, healthcare and office campuses, HOAs, and
+            multi-site properties in Massillon, Ohio and surrounding areas.
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+            Whether you need a single-family home or a commercial facility maintained, the same licensed, insured team
+            delivers consistent results.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allServices.map((service, index) => (
               <ServiceCard

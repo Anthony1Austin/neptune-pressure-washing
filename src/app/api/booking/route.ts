@@ -31,7 +31,14 @@ export async function POST(request: NextRequest) {
     const { turnstileToken: _t, ...lead } = data
 
     // Validate required fields
-    if (!lead.name || !lead.email || !lead.phone || !lead.service || !lead.address) {
+    if (
+      !lead.name ||
+      !lead.email ||
+      !lead.phone ||
+      !lead.propertyType ||
+      !lead.service ||
+      !lead.address
+    ) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -59,6 +66,7 @@ export async function POST(request: NextRequest) {
         <p><strong>Name:</strong> ${lead.name}</p>
         <p><strong>Email:</strong> ${lead.email}</p>
         <p><strong>Phone:</strong> ${lead.phone}</p>
+        <p><strong>Property type:</strong> ${lead.propertyType}</p>
         <p><strong>Service:</strong> ${lead.service}</p>
         <p><strong>Address:</strong> ${lead.address}</p>
         <p><strong>Preferred Date:</strong> ${lead.preferredDate || 'Not specified'}</p>
